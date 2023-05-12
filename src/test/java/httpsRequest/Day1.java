@@ -67,6 +67,7 @@ public class Day1 {
 	@Test(priority=3,dependsOnMethods= {"createUser"})
 	void updateUser()
 	{
+		System.out.println("Adding comment");
 
 		HashMap data=new HashMap();
 		data.put("name","john");
