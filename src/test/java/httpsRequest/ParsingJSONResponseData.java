@@ -27,7 +27,7 @@ public class ParsingJSONResponseData {
 		
 		.then()
 			.statusCode(200)
-			.header("Content-Type","application/json; charset=utf-8")
+			.header("Content-Type","n/json; charset=utf-8")
 			.body("book[3].title",equalTo("The Lord of the Rings"))
 			.log().all();
 		
