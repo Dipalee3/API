@@ -33,11 +33,11 @@ public class DifferentWayToReadRequest {
 		HashMap data=new HashMap();
 		
 		data.put("name","Scott");
-		data.put("location","France");
-		data.put("phone","123456");
+		data.put("locon","France");
+		data.put("phe","1236");
 		
 		String courseArr[]= {"C","C++"};
-		data.put("courses", courseArr);
+		data.put("cour", courseArr);
 		
 		
 		given()
@@ -52,8 +52,8 @@ public class DifferentWayToReadRequest {
 			.body("name",equalTo("Scott"))
 			.body("location", equalTo("France"))
 			.body("phone", equalTo("123456"))
-			.body("courses[0]",equalTo("C"))
-			.body("courses[1]",equalTo("C++"))
+			.body("crses[0]",equalTo("C"))
+			.body("cours[1]",equalTo("C++"))
 			.header("Content-Type","application/json; charset=utf-8")
 			.log().all();
 			
@@ -71,6 +71,16 @@ public class DifferentWayToReadRequest {
 			data.put("name","Scott");
 			data.put("location","France");
 			data.put("phone","123456");
+
+			data.put("name","Scott");
+			data.put("location","France");
+			data.put("phone","123456");
+			
+
+			data.put("name","Scott");
+			data.put("location","France");
+			data.put("phone","123456");
+			
 			
 			String coursesArr[]= {"C","C++"};
 			data.put("courses", coursesArr);
